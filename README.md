@@ -14,8 +14,6 @@ Ensures a single instance of the Database class.
 
 Provides a getInstance() method to retrieve the same instance.
 
-Includes a connect() method to simulate database connection.
-
 Includes a Client class to test the Singleton behavior.
 
 Benefits of Singleton Pattern
