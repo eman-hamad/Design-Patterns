@@ -1,50 +1,51 @@
-## User Builder Design Pattern in Dart
+## Singleton Pattern in Dart
 
-This project demonstrates the Builder Design Pattern in Dart by implementing a User class that allows controlled instantiation with optional attributes.
+## Overview
 
-## Features
-
-Enforces required fields (firstName and lastName).
-
-Allows setting optional fields (age and phone).
-
-Uses a UserBuilder class to construct User instances flexibly.
-
-## Usage
-
-1. Define a User instance with optional data:
-
-```
-User user1 = UserBuilder("Asma", "Ahmed")
-    .setAge(30)
-    .setPhone("01233444455")
-    .build();
-print(user1);
-```
-
+The Singleton pattern ensures that a class has only one instance and provides a global point of access to that instance. This is useful for managing shared resources such as database connections.
 
 ## Implementation Details
 
-## User Class:
+This project demonstrates the Singleton pattern in Dart using a Database class. The Database class ensures that only one instance of the database is created and shared across the application.
 
-Private constructor (builder) ensures instances are created only via UserBuilder.
+## Features
 
-toString method for easy logging of User details.
+Ensures a single instance of the Database class.
 
-## UserBuilder Class:
+Provides a getInstance() method to retrieve the same instance.
 
-Accepts mandatory fields via the constructor.
+Includes a connect() method to simulate database connection.
 
-Provides chainable methods (setAge, setPhone) for optional attributes.
+Includes a Client class to test the Singleton behavior.
 
-Calls build() to generate a User instance.
+Benefits of Singleton Pattern
 
-## Running the Code
+Prevents multiple object creation, saving memory.
 
-Ensure you have Dart installed and run:
+Ensures controlled access to shared resources.
+
+Provides a single point of access to the instance.
+
+## Usage Scenarios
+
+Database connections
+
+Logging frameworks
+
+Configuration settings
+
+Caching mechanisms
+
+## How to Run
+
+Clone this repository.
+
+Open the project in a Dart-supported IDE (e.g., VS Code or IntelliJ IDEA).
+
+Run the main.dart file using:
 
 ```
-dart run user_builder.dart
+dart run
 ```
 
-
+Observe the output to confirm Singleton behavior.
