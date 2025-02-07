@@ -12,7 +12,7 @@ This project demonstrates the Singleton pattern in Dart using a Database class. 
 
 Ensures a single instance of the Database class.
 
-Provides a getInstance() method to retrieve the same instance.
+Provides a createInstance() method to retrieve the same instance.
 
 Includes a Client class to test the Singleton behavior.
 
